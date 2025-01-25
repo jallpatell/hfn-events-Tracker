@@ -1,11 +1,313 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Reports</title>
-</head>
-<body>
-    
-</body>
-</html>
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Header Section */
+.main-header {
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* Beautiful gradient background */
+  padding: 15px 0;
+}
+
+.main-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-header nav .logo img {
+  width: 120px;
+}
+
+.main-header nav .nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+.main-header nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.main-header nav .nav-links li a:hover {
+  color: #ff5722;
+}
+
+/* Page Banner Styles */
+.page-banner {
+  background: url('/images/banner-image.jpg') no-repeat center center/cover; /* Background image for the banner */
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  background-blur: 5px;
+}
+
+.page-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.page-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Reports Container Styles */
+.reports-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+/* Individual Report Card Styles */
+.report-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.report-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.report-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 15px;
+}
+
+.report-card p {
+  color: #777;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.report-card .btn-primary {
+  background-color: #ff7e5f;
+  padding: 12px 20px;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.report-card .btn-primary:hover {
+  background-color: #feb47b;
+}
+
+.report-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer .footer-links {
+  margin-bottom: 20px;
+}
+
+.footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer .footer-links a:hover {
+  color: #ff5722;
+}
+
+.footer .social-icons a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer .social-icons a:hover {
+  color: #ff5722;
+}
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Header Section */
+.main-header {
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* Beautiful gradient background */
+  padding: 15px 0;
+}
+
+.main-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-header nav .logo img {
+  width: 120px;
+}
+
+.main-header nav .nav-links {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+.main-header nav .nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.main-header nav .nav-links li a:hover {
+  color: #ff5722;
+}
+
+/* Page Banner Styles */
+.page-banner {
+  background: url('/images/banner-image.jpg') no-repeat center center/cover; /* Background image for the banner */
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  background-blur: 5px;
+}
+
+.page-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.page-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Reports Container Styles */
+.reports-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+/* Individual Report Card Styles */
+.report-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.report-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.report-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 15px;
+}
+
+.report-card p {
+  color: #777;
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.report-card .btn-primary {
+  background-color: #ff7e5f;
+  padding: 12px 20px;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.report-card .btn-primary:hover {
+  background-color: #feb47b;
+}
+
+.report-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer .footer-links {
+  margin-bottom: 20px;
+}
+
+.footer .footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer .footer-links a:hover {
+  color: #ff5722;
+}
+
+.footer .social-icons a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer .social-icons a:hover {
+  color: #ff5722;
+}
