@@ -5,10 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events Registration</title>
     <link rel="stylesheet" href="/styles.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(90deg, #ff758c, #ff7eb3);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        .nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .container {
+            background: white;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+        }
+        h2 {
+            color: #ff758c;
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 20px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        button {
+            background: #ff758c;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        button:hover {
+            background: #ff5274;
+        }
+        .hero img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
-        <div class="logo">heartfulness</div>
+        Heartfulness Events
         <nav class="nav">
             <ul>
                 <li><a href="#">Home</a></li>
@@ -28,31 +108,31 @@
         <h2>Event Registration Form</h2>
         <form id="event-registration-form" method="POST" action="">
             <label for="hfn_first_name">HFN Coordinator First Name *</label>
-            <input type="text" id="hfn_first_name" name="hfn_first_name" required><br><br>
+            <input type="text" id="hfn_first_name" name="hfn_first_name" required>
 
             <label for="hfn_last_name">HFN Coordinator Last Name *</label>
-            <input type="text" id="hfn_last_name" name="hfn_last_name" required><br><br>
+            <input type="text" id="hfn_last_name" name="hfn_last_name" required>
 
             <label for="phone_number">Phone Number *</label>
-            <input type="tel" id="phone_number" name="phone_number" required><br><br>
+            <input type="tel" id="phone_number" name="phone_number" required>
 
             <label for="email_address">Email Address *</label>
-            <input type="email" id="email_address" name="email_address" required><br><br>
+            <input type="email" id="email_address" name="email_address" required>
 
             <label for="session_date">Heartfulness Session Date *</label>
-            <input type="date" id="session_date" name="session_date" required><br><br>
+            <input type="date" id="session_date" name="session_date" required>
 
             <label for="organization_name">Organization/Company Name *</label>
-            <input type="text" id="organization_name" name="organization_name" required><br><br>
+            <input type="text" id="organization_name" name="organization_name" required>
 
             <label for="organization_location">Organization Location *</label>
-            <input type="text" id="organization_location" name="organization_location" required><br><br>
+            <input type="text" id="organization_location" name="organization_location" required>
 
             <label for="organization_coordinator_name">Organization Coordinator Name *</label>
-            <input type="text" id="organization_coordinator_name" name="organization_coordinator_name" required><br><br>
+            <input type="text" id="organization_coordinator_name" name="organization_coordinator_name" required>
 
             <label for="organization_coordinator_phone">Organization Coordinator Phone Number *</label>
-            <input type="tel" id="organization_coordinator_phone" name="organization_coordinator_phone" required><br><br>
+            <input type="tel" id="organization_coordinator_phone" name="organization_coordinator_phone" required>
 
             <label for="connect_name">Select Connect Name *</label>
             <select id="connect_name" name="connect_name" required>
@@ -65,10 +145,10 @@
                 <option value="University Connect">University Connect</option>
                 <option value="NGOs">NGOs</option>
                 <option value="Village Connect">Village Connect</option>
-            </select><br><br>
+            </select>
 
             <label for="specific_requirements">Any Specific Requirements</label>
-            <textarea id="specific_requirements" name="specific_requirements" rows="4"></textarea><br><br>
+            <textarea id="specific_requirements" name="specific_requirements" rows="4"></textarea>
 
             <button type="submit">Submit</button>
         </form>
