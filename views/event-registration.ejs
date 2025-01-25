@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Registration</title>
+    <title>Events Registration</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    
+    <header class="header">
+        <div class="logo">heartfulness</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Events Registration</a></li>
+                <li><a href="#">New Session Registration</a></li>
+                <li><a href="#">Upcoming Sessions</a></li>
+                <li><a href="#">HFN Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="/images/heart-event.jpg" alt="Heartfulness Event">
+    </section>
+
+    <div class="container">
+        <h2>Event Registration Form</h2>
+        <form id="event-registration-form" method="POST" action="">
+            <label for="hfn_first_name">HFN Coordinator First Name *</label>
+            <input type="text" id="hfn_first_name" name="hfn_first_name" required><br><br>
+
+            <label for="hfn_last_name">HFN Coordinator Last Name *</label>
+            <input type="text" id="hfn_last_name" name="hfn_last_name" required><br><br>
+
+            <label for="phone_number">Phone Number *</label>
+            <input type="tel" id="phone_number" name="phone_number" required><br><br>
+
+            <label for="email_address">Email Address *</label>
+            <input type="email" id="email_address" name="email_address" required><br><br>
+
+            <label for="session_date">Heartfulness Session Date *</label>
+            <input type="date" id="session_date" name="session_date" required><br><br>
+
+            <label for="organization_name">Organization/Company Name *</label>
+            <input type="text" id="organization_name" name="organization_name" required><br><br>
+
+            <label for="organization_location">Organization Location *</label>
+            <input type="text" id="organization_location" name="organization_location" required><br><br>
+
+            <label for="organization_coordinator_name">Organization Coordinator Name *</label>
+            <input type="text" id="organization_coordinator_name" name="organization_coordinator_name" required><br><br>
+
+            <label for="organization_coordinator_phone">Organization Coordinator Phone Number *</label>
+            <input type="tel" id="organization_coordinator_phone" name="organization_coordinator_phone" required><br><br>
+
+            <label for="connect_name">Select Connect Name *</label>
+            <select id="connect_name" name="connect_name" required>
+                <option value="Community Connect">Community Connect</option>
+                <option value="Corporate Connect">Corporate Connect</option>
+                <option value="Defense or Police">Defense or Police</option>
+                <option value="Government Connect">Government Connect</option>
+                <option value="Medical Connect">Medical Connect</option>
+                <option value="School Connect">School Connect</option>
+                <option value="University Connect">University Connect</option>
+                <option value="NGOs">NGOs</option>
+                <option value="Village Connect">Village Connect</option>
+            </select><br><br>
+
+            <label for="specific_requirements">Any Specific Requirements</label>
+            <textarea id="specific_requirements" name="specific_requirements" rows="4"></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
