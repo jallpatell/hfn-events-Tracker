@@ -23,10 +23,12 @@ const App = () => {
         <div className='input-wrapper'>
           <input type='password' placeholder='Password'
           className='input-feild' required />
-          <i class="material-symbols-rounded">lock</i>
+          <i class="material-symbols-rounded ">lock</i>
         </div>
+        <a href='#' className='forgot-password-link'> Forgot Password?</a>
+        <button className="login-button">LogIn</button>
       </form>
-
+      <p className="signup-text">Don't have an account? <a href="#">Sign-up now</a></p>
       
     </div>
   )

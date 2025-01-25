@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(25, 97, 160);
+}
+
+.login-container {
+  max-width: 410px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-container .form-title {
+  text-align: center;
+  font-size: 1.37rem;
+  font-weight: 600;
+  margin-bottom: 1.87rem;
+}
+
+
+.login-container .social-login{
+  display: flex;
+  gap: 1.31rem;
+
+}
+
+#root {
+  width: 100%;
+  padding: 0 0.6rem;
+}
+
+.social-login .social-button{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-weight: 500;
+  justify-content: center;
+  gap: 0.81rem;
+  font-size: 1rem;
+  padding: 0.75rem 0;
+  border-radius: 0.31rem;
+  background: #F9F8FF;
+  border: 1px solid #D5CBFF;
+  transition: 0.3s ease;
+}
+
+
+.social-login .social-button::hover{
+  background: #f1eff9;
+  border-color: #5f41e4; 
+
+}
+
+.social-login .social-button::hover{
+  background: #F5F8FF;
+  border-color: 1px solid #D5CBFF;
+
+}
+.social-login .social-button .social-icon{
+  width: 23px;
+}
+
+.seperator .login-container {
+  margin: 1.5rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.seperator .login-container::after{
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background: #bfb3b2;
+}
+
+.seperator .login-container span{
+  background: #fff;
+  padding: 0 0.9rem;
+  font-size: 1.06rem;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
