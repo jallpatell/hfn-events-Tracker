@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const mongoose = require('mongoose');
 
 const app = express();
 const PORT = 3000;
@@ -8,7 +9,7 @@ const PORT = 3000;
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-// Middleware to serve static files
+// Middležare to serve static files
 app.use(express.static(path.join(__dirname, "public")));
 
 // Routes
