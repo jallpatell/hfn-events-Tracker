@@ -32,6 +32,7 @@ app.get("/reports", (req, res) => {
     res.render("reports", { title: "Reports" });
 });
 
+
 // Start server
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);

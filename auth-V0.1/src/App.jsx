@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='login-container'>
+      <h2 className='form-title'> Log-in with</h2>
+      <div className='social-login'>
+        <button className="social-button">
+          <img src="../logos/google.svg" alt="Google" className="social-icon"/>Google
+          </button>
+          <button className="social-button">
+          <img src="../logos/apple.svg" alt="Apple" className="social-icon"/>Apple
+          </button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <p className="seperator"> <span>or</span></p>
+      <form action='#'className='login-form'>
+        <div className='input-wrapper'>
+          <input type='email' placeholder='Email address'
+          className='input-feild' required />
+          <i class="material-symbols-rounded">mail</i>
+        </div>
+
+        <div className='input-wrapper'>
+          <input type='password' placeholder='Password'
+          className='input-feild' required />
+          <i class="material-symbols-rounded">lock</i>
+        </div>
+      </form>
+
+      
+    </div>
   )
 }
 
