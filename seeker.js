@@ -1,4 +1,3 @@
-// Import mongoose
 const mongoose = require('mongoose');
 
 // Define the schema for new seekers
