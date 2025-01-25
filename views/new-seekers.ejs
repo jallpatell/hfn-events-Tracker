@@ -2,10 +2,246 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=SW, initial-scale=1.0">
-    <title>New Seeker Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartfulness Seekers Registration</title>
+    <style>
+        /* Basic Reset */
+        body, h1, button {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* Soft blue background */
+            color: #333; /* Dark text for readability */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(to right, #6a11cb, #2575fc); /* Gradient background */
+            padding: 40px 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Button Styling */
+        .header-button {
+            padding: 15px 30px;
+            background-color: #fff;
+            color: #2575fc;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header-button:hover {
+            background-color: #2575fc;
+            color: white;
+        }
+
+        /* Form Section */
+        .form-container {
+            width: 100%;
+            max-width: 750px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: 40px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #2575fc;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="tel"], input[type="email"], select {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+            font-size: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #2575fc;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #6a11cb;
+        }
+
+    </style>
 </head>
 <body>
     
+     <!-- Header Section -->
+    <header>
+        <h1>Heartfulness Seekers Registration</h1>
+        <button class="header-button" onclick="location.href='#form-container'">Start Registration</button> <!-- Button to Scroll to Form -->
+    </header>
+ 
+    <div class="form-container" id="form-container">
+        <h2>New Seekers Registration Form</h2>
+        <form id="new-seekers-form" method="POST" enctype="multipart/form-data">
+            <!-- Event Name -->
+            <div class="input-group">
+                <label for="event_name">Event Name:</label>
+                <select id="event_name" name="event_name" required>
+                    <option value="">-- Please select the event you are registering for --</option>
+                    <!-- Event options will be dynamically populated here -->
+                </select>
+            </div>
+
+            <!-- Organization/Company Name -->
+            <div class="input-group">
+                <label for="organization_name">Organization/Company Name:</label>
+                <input type="text" id="organization_name" name="organization_name" readonly>
+            </div>
+
+            <!-- Organization Location -->
+            <div class="input-group">
+                <label for="organization_location">Organization Location:</label>
+                <input type="text" id="organization_location" name="organization_location" readonly>
+            </div>
+
+            <!-- Connect Name -->
+            <div class="input-group">
+                <label for="connect_name">Connect Name:</label>
+                <input type="text" id="connect_name" name="connect_name" readonly>
+            </div>
+
+            <!-- HFN Coordinator Name -->
+            <div class="input-group">
+                <label for="hfn_coordinator_name">HFN Coordinator Name:</label>
+                <input type="text" id="hfn_coordinator_name" name="hfn_coordinator_name" readonly>
+            </div>
+
+            <!-- Heartfulness Session Date -->
+            <div class="input-group">
+                <label for="session_date">Heartfulness Session Date:</label>
+                <input type="text" id="session_date" name="session_date" readonly>
+            </div>
+
+            <!-- Trainer Name -->
+            <div class="input-group">
+                <label for="trainer_name">Trainer Name:</label>
+                <input type="text" id="trainer_name" name="trainer_name" required>
+            </div>
+
+            <!-- Volunteers' Names -->
+            <div class="input-group">
+                <label for="volunteers_names">Volunteers’ Names:</label>
+                <input type="text" id="volunteers_names" name="volunteers_names" placeholder="Enter names separated by commas" required>
+            </div>
+
+            <!-- Seeker's Name -->
+            <div class="input-group">
+                <label for="seeker_name">Seeker's Name:</label>
+                <input type="text" id="seeker_name" name="seeker_name" required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="input-group">
+                <label for="phone_number">Phone Number:</label>
+                <input type="tel" id="phone_number" name="phone_number" required>
+            </div>
+
+            <!-- Email Address -->
+            <div class="input-group">
+                <label for="email_address">Email Address:</label>
+                <input type="email" id="email_address" name="email_address" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="input-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+
+            <!-- Occupation -->
+            <div class="input-group">
+                <label for="occupation">Please select your occupation:</label>
+                <select id="occupation" name="occupation" required>
+                    <option value="Service">Service</option>
+                    <option value="Business">Business</option>
+                    <option value="Homemaker">Homemaker</option>
+                </select>
+            </div>
+
+            <!-- Residential Location -->
+            <div class="input-group">
+                <label for="residential_location">Residential Location:</label>
+                <input type="text" id="residential_location" name="residential_location" required>
+            </div>
+
+            <!-- Age -->
+            <div class="input-group">
+                <label for="age">Age:</label>
+                <input type="text" id="age" name="age" required>
+            </div>
+
+            <!-- CSV File Upload -->
+            <div class="input-group">
+                <label for="csv_upload">CSV File Upload:</label>
+                <input type="file" id="csv_upload" name="csv_upload" accept=".csv">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
