@@ -3,9 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vier Upcoming SessionsS</title>
+    <title>Upcoming Sessions</title>
+    <style>
+        /* General Reset */
+        body, h1, button {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Header Section */
+        header {
+            background: #6a11cb; /* Beautiful solid background color */
+            padding: 40px 20px;
+            width: 100%;
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .header-button {
+            padding: 15px 30px;
+            background-color: #fff;
+            color: #6a11cb;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .header-button:hover {
+            background-color: #2575fc;
+            color: white;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        table th {
+            background-color: #f4f4f4;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Header Section -->
+    <header>
+        <h1>Upcoming Heartfulness Sessions</h1>
+        <button class="header-button" onclick="location.href='#sessions'">View Sessions</button>
+    </header>
+
+    <div id="sessions">
+        <h2>Upcoming Sessions</h2>
+
+        <% if (events.length > 0) { %>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event Date</th>
+                        <th>Organization Name</th>
+                        <th>Location</th>
+                        <th>HFN Coordinator Name</th>
+                        <th>Connect Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% events.forEach(function(event) { %>
+                        <tr>
+                            <td><%= new Date(event.session_date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) %></td>
+                            <td><%= event.organization_name %></td>
+                            <td><%= event.organization_location %></td>
+                            <td><%= event.hfn_coordinator_name %></td>
+                            <td><%= event.connect_name %></td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        <% } else { %>
+            <p>No upcoming sessions available at the moment.</p>
+        <% } %>
+    </div>
 </body>
 </html>
